@@ -1,7 +1,21 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import styled from "styled-components";
 import { Route, NavLink } from "react-router-dom";
 import { Context } from "../contexts/TeaContext"
+
+const Div = styled.div`
+
+`
+const Description = styled.p`
+
+`
+const Img = styled.img`
+
+`
+const TeaName = styled.h1`
+
+`
 
 const Tea = props => (
     <Context.Consumer>
@@ -11,7 +25,11 @@ const Tea = props => (
   }
           const TeaPage = data.state.teas.find(tea => `${tea.id}` === props.match.params.id);
           return (
-          <h3>{TeaPage.description}</h3>
+              <Div>
+                  <TeaName>{TeaPage.name}</TeaName>
+                  <Img src={TeaPage.message} alt="green tea" />
+          <Description>{TeaPage.description}</Description>
+          </Div>
       )
       }}
       

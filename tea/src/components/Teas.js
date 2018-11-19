@@ -1,7 +1,7 @@
 import React from 'react';
 import { Context } from "../contexts/TeaContext";
 import {Link} from "react-router-dom"
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 const TeaWrapper = styled.div`
  border: 1px solid red;
  display: flex;
@@ -15,10 +15,25 @@ const TeaName = styled.h2`
 text-align: center;
 
 `
+const ImageHover = keyframes`
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0.75
+    }
+    100% {
+        opacity: 0.5
+    }
+`
 const TeaImg = styled.img`
  width: 200px;
  height: 200px;
+ cursor: pointer;
  border-radius: 7px;
+ &:hover {
+    animation: ${ImageHover} 0.7s linear infinite;
+ }
 `
 const Teas = props => {
     return (
