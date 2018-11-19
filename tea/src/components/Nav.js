@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import PropTypes from "prop-types"
 const NavWrapper = styled.div`
     background-color: ${props => props.theme.offWhite};
 `
@@ -36,13 +36,15 @@ padding: 15px;
 `
 const Nav = () => (
     <NavWrapper>
+        <Link to="/">
     <Title><i class="fas fa-certificate"></i></Title>
+    </Link>
     <NavLinks>
-        <Link to=''><ATags>Tea</ATags> </Link>
-        <Link to=''><ATags>Teaware</ATags></Link>
-        <Link to=''><ATags>Contact Us</ATags></Link>
-        <Link to=''><ATags>FAQ</ATags></Link>
-        <Link to=''><ATags>Tea Types</ATags></Link>
+        <Link to='/teas'><ATags>Tea</ATags> </Link>
+        <Link to='/teaware'><ATags>Teaware</ATags></Link>
+        <Link to='/contact'><ATags>Contact Us</ATags></Link>
+        <Link to='/faq'><ATags>FAQ</ATags></Link>
+        <Link to='/types'><ATags>Tea Types</ATags></Link>
     </NavLinks>
     </NavWrapper>
 )

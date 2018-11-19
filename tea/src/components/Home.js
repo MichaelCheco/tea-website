@@ -7,6 +7,7 @@ const HomeImg = styled.img`
 margin-top: -167px;
 `
 const appear = keyframes`
+
   0% {
     opacity: 0;
   }
@@ -27,8 +28,8 @@ display: flex;
 color: ${props => props.theme.darkblue};
 position: relative;
 top: 100px;
-font-size: 50px;
-animation: ${appear} 5s linear;
+font-size: 60px;
+animation: ${appear} 6s linear;
 justify-content: center;
 align-items: center;
 `

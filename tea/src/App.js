@@ -7,6 +7,10 @@ import Teas from "./components/Teas";
 import Nav from "./components/Nav";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import Home from "./components/Home";
+import Contact from "./components/Contact";
+import FAQ from "./components/FAQ";
+import Teaware from "./components/Teaware";
+import TeaTypes from "./components/TeaTypes";
 
 const theme = {
   black: "#393939",
@@ -50,9 +54,12 @@ class App extends Component {
         <ThemeProvider theme={theme}>
           <TeaProvider>
             <Nav />
-            <Home />
-            <Route path="/" Component={Home} />
+            <Route exact path="/" render={Home} />
             <Route path="/teas" render={props => <Teas {...props} />} />
+            <Route path="/contact" render={props => <Contact {...props} />} />
+            <Route path="/faq" render={props => <FAQ {...props} />} />
+            <Route path="/teaware" render={props => <Teaware {...props} />} />
+            <Route path="/types" render={props => <TeaTypes {...props} />} />
           </TeaProvider>
         </ThemeProvider>
       </div>
