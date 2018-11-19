@@ -11,6 +11,7 @@ import Contact from "./components/Contact";
 import FAQ from "./components/FAQ";
 import Teaware from "./components/Teaware";
 import TeaTypes from "./components/TeaTypes";
+import Tea from "./components/Tea";
 
 const theme = {
   black: "#393939",
@@ -55,7 +56,8 @@ class App extends Component {
           <TeaProvider>
             <Nav />
             <Route exact path="/" render={Home} />
-            <Route path="/teas" render={props => <Teas {...props} />} />
+            <Route exact path="/teas" render={props => <Teas {...props} />} />
+            <Route path="/teas/:id" render={props => <Tea {...props} />} />
             <Route path="/contact" render={props => <Contact {...props} />} />
             <Route path="/faq" render={props => <FAQ {...props} />} />
             <Route path="/teaware" render={props => <Teaware {...props} />} />
