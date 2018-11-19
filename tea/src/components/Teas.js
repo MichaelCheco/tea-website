@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 import styled, { keyframes } from "styled-components";
 const TeaWrapper = styled.div`
- border: 1px solid red;
  display: flex;
  flex-flow: row wrap;
 `

@@ -9,7 +9,7 @@ import Home from "./components/Home";
 import Contact from "./components/Contact";
 import FAQ from "./components/FAQ";
 import Teaware from "./components/Teaware";
-import TeaTypes from "./components/TeaTypes";
+import AddTea from "./components/AddTea";
 import Tea from "./components/Tea";
 
 const theme = {
@@ -60,7 +60,7 @@ class App extends Component {
             <Route path="/contact" render={props => <Contact {...props} />} />
             <Route path="/faq" render={props => <FAQ {...props} />} />
             <Route path="/teaware" render={props => <Teaware {...props} />} />
-            <Route path="/types" render={props => <TeaTypes {...props} />} />
+            <Route path="/add" render={props => <AddTea {...props} />} />
           </TeaProvider>
         </ThemeProvider>
       </div>

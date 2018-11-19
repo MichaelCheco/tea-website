@@ -44,7 +44,7 @@ const Nav = () => (
         <Link to='/teaware'><ATags>Teaware</ATags></Link>
         <Link to='/contact'><ATags>Contact Us</ATags></Link>
         <Link to='/faq'><ATags>FAQ</ATags></Link>
-        <Link to='/types'><ATags>Tea Types</ATags></Link>
+        <Link to='/add'><ATags>Add a Tea</ATags></Link>
     </NavLinks>
     </NavWrapper>
 )

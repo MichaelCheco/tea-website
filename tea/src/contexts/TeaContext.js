@@ -10,8 +10,9 @@ class TeaProvider extends Component {
             teas: [],
             tea: '',
             description: '',
-            image: '',
-            activeItem: null
+            message: '',
+            activeItem: null,
+            toggle: false
         }
     }
     
@@ -34,10 +35,26 @@ class TeaProvider extends Component {
        this.getItemById(item.id)
       
       }
+      handleChange = e => {
+          this.setState({[e.target.name]: e.target.value})
+      }
+      addTea = e => {
+          e.preventDefault()
+        const info = {
+            name: this.state.name,
+            description: this.state.description,
+            message: this.state.message
+          }
+        axios.post('http://localhost:9000/api/teas', info)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+        this.setState({toggle: !this.state.toggle})
+        setTimeout(() => this.setState({toggle: false}), 1000)
+      }
 
     render() {
         return (
-            <Context.Provider value={{state: this.state, actions: {getItem: this.getItemById, routeToItem: this.routeToItem}}}>
+            <Context.Provider value={{state: this.state, actions: {addTea: this.addTea, handleChange: this.handleChange}}}>
                 {this.props.children}
             </Context.Provider>
         )
