@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Link, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import TeaProvider from "./contexts/TeaContext";
 import Teas from "./components/Teas";
 import Nav from "./components/Nav";
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import FAQ from "./components/FAQ";

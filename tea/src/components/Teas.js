@@ -1,6 +1,8 @@
 import React from 'react';
 import { Context } from "../contexts/TeaContext";
 import {Link} from "react-router-dom"
+import PropTypes from 'prop-types';
+
 import styled, { keyframes } from "styled-components";
 const TeaWrapper = styled.div`
  border: 1px solid red;
@@ -57,6 +59,12 @@ const Teas = props => {
             }}
         </Context.Consumer>
     )
+}
+
+Teas.propTypes = {
+  message: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  teas: PropTypes.array.isRequired
 }
 
 export default Teas;

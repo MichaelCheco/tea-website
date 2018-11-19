@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styled, { keyframes } from "styled-components";
 const HomeDiv = styled.div`
 
@@ -40,5 +41,6 @@ const Home = () => (
     <HomeImg src="https://images.pexels.com/photos/641038/pexels-photo-641038.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="tea cup" />
     </HomeDiv>
 )
+
 
 export default Home;
