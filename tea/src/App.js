@@ -6,6 +6,7 @@ import TeaProvider from "./contexts/TeaContext";
 import Teas from "./components/Teas";
 import Nav from "./components/Nav";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+import Home from "./components/Home";
 
 const theme = {
   black: "#393939",
@@ -31,6 +32,10 @@ const GlobalStyle = createGlobalStyle`
         line-height: 2;
         font-family: 'Raleway', sans-serif;    
       }
+      img {
+        width: 100%;
+        height: auto;
+      }
     a {
         text-decoration: none;
         color: ${theme.black};
@@ -45,7 +50,9 @@ class App extends Component {
         <ThemeProvider theme={theme}>
           <TeaProvider>
             <Nav />
-            <Route path="/" render={props => <Teas {...props} />} />
+            <Home />
+            <Route path="/" Component={Home} />
+            <Route path="/teas" render={props => <Teas {...props} />} />
           </TeaProvider>
         </ThemeProvider>
       </div>

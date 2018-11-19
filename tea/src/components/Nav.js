@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavWrapper = styled.div`
-    border: 2px solid red;
+    background-color: ${props => props.theme.offWhite};
 `
 const NavLinks = styled.nav`
 display: flex;
@@ -16,6 +16,7 @@ height: 50px;
 `
 const Title = styled.h1`
 width: 100%;
+height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -35,7 +36,7 @@ padding: 15px;
 `
 const Nav = () => (
     <NavWrapper>
-    <Title>CHECOsTEA</Title>
+    <Title><i class="fas fa-certificate"></i></Title>
     <NavLinks>
         <Link to=''><ATags>Tea</ATags> </Link>
         <Link to=''><ATags>Teaware</ATags></Link>
@@ -45,5 +46,5 @@ const Nav = () => (
     </NavLinks>
     </NavWrapper>
 )
-
+// <i class="fas fa-coffee fa-spin"></i>
 export default Nav;
