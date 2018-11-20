@@ -5,10 +5,22 @@ const Header = styled.h1``;
 const Div = styled.div``;
 const ContactHeader = styled.h1``;
 const ContactDiv = styled.div`
+
 	width: 30%;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+`;
+const ContactWrapper = styled.div`
+    justify-content: center;
+    display: flex;
+
 `;
 const ContactWrapper = styled.div`display: flex;`;
 const Address = styled.p`
