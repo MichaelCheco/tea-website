@@ -20,6 +20,7 @@ const ContactDiv = styled.div`
 
 `;
 const ContactWrapper = styled.div`
+    justify-content: center;
     display: flex;
 `;
 const Address = styled.p`
