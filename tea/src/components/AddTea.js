@@ -34,9 +34,6 @@ const Inputs = styled.div`
 `;
 const Header = styled.h1`margin-left: 10px;`;
 class AddTea extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 	render() {
 		const { addTea, name, handleChange, message, description, toggle } = this.props;
 		return (
