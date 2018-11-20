@@ -7,6 +7,7 @@ import styled, { keyframes } from "styled-components";
 const TeaWrapper = styled.div`
  display: flex;
  flex-flow: row wrap;
+ height: 100vh;
 `
 const TeaDiv = styled.div`
 margin: 20px;

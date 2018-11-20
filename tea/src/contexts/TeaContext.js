@@ -8,6 +8,7 @@ class TeaProvider extends Component {
         super(props)
         this.state = {
             teas: [],
+            teaware: [],
             tea: '',
             description: '',
             message: '',
@@ -20,6 +21,11 @@ class TeaProvider extends Component {
         axios.get('http://localhost:9000/api/teas')
         .then(res => {
             this.setState({teas: res.data})
+        })
+        .catch(err => console.log(err))
+        axios.get('http://localhost:9000/api/teaware')
+        .then(res => {
+            this.setState({teaware: res.data})
         })
         .catch(err => console.log(err))
     }
