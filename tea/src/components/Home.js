@@ -30,7 +30,7 @@ color: ${props => props.theme.darkblue};
 position: relative;
 top: 100px;
 font-size: 60px;
-animation: ${appear} 6s linear;
+animation: ${appear} 10s linear;
 justify-content: center;
 align-items: center;
 `
