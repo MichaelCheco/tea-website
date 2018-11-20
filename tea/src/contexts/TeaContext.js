@@ -29,18 +29,6 @@ class TeaProvider extends Component {
         })
         .catch(err => console.log(err))
     }
-    getItemById = id => {
-        axios
-          .get(`http://localhost:9000/api/teas/${id}`)
-          .then(res => this.setState({ activeItem: res.data }))
-          .catch(err => console.log(err))
-      }
-
-    routeToItem = (ev, item, props) => {
-        ev.preventDefault();
-       this.getItemById(item.id)
-      
-      }
       handleChange = e => {
           this.setState({[e.target.name]: e.target.value})
       }
