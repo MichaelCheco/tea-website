@@ -5,7 +5,7 @@ const HomeDiv = styled.div`
 
 `
 const HomeImg = styled.img`
-margin-top: -167px;
+margin-top: -200px;
 `
 const appear = keyframes`
 

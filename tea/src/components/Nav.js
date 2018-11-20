@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import PropTypes from "prop-types"
+import "../index.css"
 const NavWrapper = styled.div`
     background-color: ${props => props.theme.offWhite};
 `
@@ -20,6 +21,7 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+margin-top: -10px;
 `
 const ATags = styled.a`
 color: ${props => props.theme.offWhite};
