@@ -34,23 +34,28 @@ const TeaImg = styled.img`
 		animation: ${ImageHover} 0.7s linear infinite;
 	}
 `;
-const Teas = (props) => {
-	const { teas } = this.props;
-	if (!teas) {
-		return <h3>Loading</h3>;
-	} else {
-		return (
-			<TeaWrapper>
-				{teas.map((tea) => (
-					<TeaDiv>
-						<TeaName>{tea.name}</TeaName>
-						<TeaImg src={tea.message} alt="tea" onClick={(e) => props.history.push(`/teas/${tea.id}`)} />
-					</TeaDiv>
-				))}
-			</TeaWrapper>
-		);
+class Teas extends React.Component {
+	constructor(props) {
+		super(props);
 	}
-};
+	render() {
+		const { teas } = this.props;
+		if (!teas) {
+			return <h3>Loading</h3>;
+		} else {
+			return (
+				<TeaWrapper>
+					{teas.map((tea) => (
+						<TeaDiv>
+							<TeaName>{tea.name}</TeaName>
+							<TeaImg src={tea.message} alt="tea" onClick={(e) => this.history.push(`/teas/${tea.id}`)} />
+						</TeaDiv>
+					))}
+				</TeaWrapper>
+			);
+		}
+	}
+}
 
 Teas.propTypes = {
 	message: PropTypes.string.isRequired,

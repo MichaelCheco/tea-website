@@ -54,13 +54,13 @@ class App extends Component {
 				<ThemeProvider theme={theme}>
 					<view>
 						<Nav />
-						<Route exact path="/" render={Home} />
-						<Route exact path="/teas" render={(props) => <Teas {...props} />} />
-						<Route path="/teas/:id" render={(props) => <Tea {...props} />} />
-						<Route path="/contact" render={(props) => <Contact {...props} />} />
-						<Route path="/faq" render={(props) => <FAQ {...props} />} />
-						<Route path="/teaware" render={(props) => <Teaware {...props} />} />
-						<Route path="/add" render={(props) => <AddTea {...props} />} />
+						<Route exact path="/" component={Home} />
+						<Route exact path="/teas" component={Teas} />
+						<Route path="/teas/:id" component={Tea} />
+						<Route path="/contact" component={Contact} />
+						<Route path="/faq" component={FAQ} />
+						<Route path="/teaware" component={Teaware} />
+						<Route path="/add" component={AddTea} />
 					</view>
 				</ThemeProvider>
 			</div>

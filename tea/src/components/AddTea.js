@@ -33,35 +33,40 @@ const Inputs = styled.div`
 	width: 35%;
 `;
 const Header = styled.h1`margin-left: 10px;`;
-const AddTea = () => {
-	const { addTea, name, handleChange, message, description, toggle } = this.props;
-	return (
-		<Form onSubmit={addTea}>
-			<Header>
-				Add your favorite tea! <i class="fas fa-coffee fa-spin" />
-			</Header>
-			<Inputs>
-				<Input type="text" name="name" placeholder="name" value={name} onChange={handleChange} />
-				<Input
-					type="text"
-					name="description"
-					placeholder="description"
-					value={description}
-					onChange={handleChange}
-				/>
-				<Input
-					type="text"
-					name="message"
-					placeholder="paste image address here"
-					value={message}
-					onChange={handleChange}
-				/>
-			</Inputs>
-			<Button type="submit" onClick={addTea}>
-				{toggle ? 'Success!' : 'Add'}
-			</Button>
-		</Form>
-	);
-};
+class AddTea extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		const { addTea, name, handleChange, message, description, toggle } = this.props;
+		return (
+			<Form onSubmit={addTea}>
+				<Header>
+					Add your favorite tea! <i class="fas fa-coffee fa-spin" />
+				</Header>
+				<Inputs>
+					<Input type="text" name="name" placeholder="name" value={name} onChange={handleChange} />
+					<Input
+						type="text"
+						name="description"
+						placeholder="description"
+						value={description}
+						onChange={handleChange}
+					/>
+					<Input
+						type="text"
+						name="message"
+						placeholder="paste image address here"
+						value={message}
+						onChange={handleChange}
+					/>
+				</Inputs>
+				<Button type="submit" onClick={addTea}>
+					{toggle ? 'Success!' : 'Add'}
+				</Button>
+			</Form>
+		);
+	}
+}
 
 export default connectStore(AddTea);

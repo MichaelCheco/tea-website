@@ -32,26 +32,31 @@ const ItemName = styled.h4`text-align: center;`;
 const Price = styled.p``;
 const Description = styled.p``;
 const Content = styled.div`width: 93%;`;
-const Teaware = () => {
-	const { teaware } = this.props;
-	return (
-		<Div>
-			{teaware.map((item) => (
-				<ItemWrapper>
-					<ItemName>{item.name}</ItemName>
-					<Img src={item.message} alt="teaware product" />
-					<Content>
-						<Price>
-							<strong>
-								{item.price} <Span>Buy Now</Span>
-							</strong>
-						</Price>
-						<Description>{item.description}</Description>
-					</Content>
-				</ItemWrapper>
-			))}
-		</Div>
-	);
-};
+class Teaware extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		const { teaware } = this.props;
+		return (
+			<Div>
+				{teaware.map((item) => (
+					<ItemWrapper>
+						<ItemName>{item.name}</ItemName>
+						<Img src={item.message} alt="teaware product" />
+						<Content>
+							<Price>
+								<strong>
+									{item.price} <Span>Buy Now</Span>
+								</strong>
+							</Price>
+							<Description>{item.description}</Description>
+						</Content>
+					</ItemWrapper>
+				))}
+			</Div>
+		);
+	}
+}
 
 export default connectStore(Teaware);
